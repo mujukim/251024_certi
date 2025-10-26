@@ -50,7 +50,7 @@ void remove(int mId)
 
 	for (int i = 0; i < _dist[temp.sCity].size(); i++)
 	{
-		if ((_dist[temp.sCity][i].first = temp.eCity) && (_dist[temp.sCity][i].second = temp.dist))
+		if ((_dist[temp.sCity][i].first == temp.eCity) && (_dist[temp.sCity][i].second == temp.dist))
 		{
 			_dist[temp.sCity].erase(_dist[temp.sCity].begin() + i);
 		}
