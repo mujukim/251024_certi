@@ -1,0 +1,31 @@
+고대 통신망 
+(최대 50개의 test case 합쳐서 1.5초 이내)
+
+고대 왕국의 N개의 도시가 주어진다.
+수도에서 정해진 도시까지 왕명을 최단거리로 전달해라.
+최단거리가 여러개일 경우 가장 거리가 긴 도시가 최소가 되는 방법을 택한다.
+
+void init (int N, int mCaptial, int K, int mID[], int sCity[], eCity[], int mDistance[])
+시작시 초기화 하는 함수 (각 test case에서 1번 호출)
+N: 도시 개수 (0~N-1의 ID를 가짐, 이 중 하나가 mCaptial) (6<= N <= 5000)
+mCaptial : 수도 ID
+K: 도로 개수 (7 <= K <=10000)
+mID: K개의 도로 ID (1 <= mID <= 1000000000)
+sCity : K개의 도로의 출발 도시
+eCity : K개의 도로의 도착 도시
+mDistance: K개의 도로의 거리
+
+void add(int mId, int sCity, int eCity, int mDistance)
+도로를 추가하는 함수 (test case 당 최소 14000 호출)
+새로운 도시는 추가되지 않음
+이미 존재하는 도로는 추가하지 않음
+sCity와 eCity는 같지 않음
+이미 존재하는 도시의 ID는 나오지 않음 
+
+void remove(int mId)
+도로를 삭제하는 함수 (test case 당 최소 1000 호출)
+존재하지 않는 ID는 나오지 않음.
+
+int calculate(int mCity)
+수도에서 mCity까지 가는데 걸리는 최소 거리 계산 함수 (test case 당 최소 5000 호출)
+return : 이동이 가능하다면 최단 경로에서 가장 거리가 긴 도로의 최소값을 출력, 불가능 하다면 -1 출력 
